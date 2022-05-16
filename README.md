@@ -15,7 +15,7 @@ Add it as a dependency in all applications that need to communicate:
 ```html
 <body>
   <!-- ... -->
-  <script src="https://cdn.jsdelivr.net/npm/micro-message/micro-message/dist/micro-message.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/micro-message/dist/micro-message.min.js"></script>
   <script>
     MicroBridge.Store.set('key', 'value')
   </script>
