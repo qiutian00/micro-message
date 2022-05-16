@@ -29,9 +29,9 @@
     "build": "cross-env NODE_ENV=production rollup -c",
     "fix": "prettier -c --write --parser=typescript \"src/**/*.ts\"",
     "test": "jest",
-    "prepublishOnly": "yarn build",
+    "prepublishOnly": "pnpm build",
     "prepare": "husky install",
-    "push": "yarn publish --registry=https://registry.yarnpkg.com"
+    "push": "npm publish --registry https://registry.npmjs.org/"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",

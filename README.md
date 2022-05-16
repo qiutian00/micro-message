@@ -7,7 +7,7 @@
 在所有需要通信的应用内将其加入依赖：
 
 ```bash
-  yarn add micro-message
+  yarn add micro-message or pnpm add micro-message
 ```
 
 ##### CDN
