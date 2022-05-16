@@ -1,4 +1,4 @@
-import { StoreBus, Store } from '../../dist/micro-bridge'
+import { StoreBus, Store } from '../../dist/micro-message'
 import { __SUBSCRIBE_SCOPE__, __MOUNT_PROPERTY__ } from '../constants'
 import { getScope } from '../store/scope'
 

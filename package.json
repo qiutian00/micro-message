@@ -1,18 +1,18 @@
 {
-  "name": "micro-bridge",
+  "name": "micro-message",
   "version": "1.1.0",
-  "author": "fz6m",
+  "author": "fz6m && qiutian00",
   "description": "global data store of micro front-end / multi app",
-  "main": "dist/micro-bridge.cjs.js",
-  "module": "dist/micro-bridge.esm.js",
-  "umd:main": "dist/micro-bridge.js",
-  "unpkg": "dist/micro-bridge.min.js",
-  "jsdelivr": "dist/micro-bridge.min.js",
+  "main": "dist/micro-message.cjs.js",
+  "module": "dist/micro-message.esm.js",
+  "umd:main": "dist/micro-message.js",
+  "unpkg": "dist/micro-message.min.js",
+  "jsdelivr": "dist/micro-message.min.js",
   "types": "types/index.d.ts",
-  "homepage": "https://github.com/fz6m/micro-bridge#README",
+  "homepage": "https://github.com/qiutian00/micro-message#README",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fz6m/micro-bridge"
+    "url": "https://github.com/qiutian00/micro-message"
   },
   "keywords": [
     "micro-frontend",

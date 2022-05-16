@@ -1,4 +1,4 @@
-import { Store } from '../../dist/micro-bridge'
+import { Store } from '../../dist/micro-message'
 import { getScope } from '../store/scope'
 
 describe('Test Store', () => {

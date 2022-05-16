@@ -1,4 +1,4 @@
-import { StoreChange, Store } from '../../dist/micro-bridge'
+import { StoreChange, Store } from '../../dist/micro-message'
 import { __VALUE_SUBSCRIBE_SCOPE__, __MOUNT_PROPERTY__ } from '../constants'
 import { getScope } from '../store/scope'
 

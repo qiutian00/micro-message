@@ -1,4 +1,4 @@
-# micro-bridge
+# micro-message
 
 一个微前端多应用间通信的全局状态管理，支持值分类管理、动态监听、事件总线
 
@@ -7,7 +7,7 @@
 在所有需要通信的应用内将其加入依赖：
 
 ```bash
-  yarn add micro-bridge
+  yarn add micro-message
 ```
 
 ##### CDN
@@ -15,7 +15,7 @@
 ```html
 <body>
   <!-- ... -->
-  <script src="https://cdn.jsdelivr.net/gh/fz6m/micro-bridge@1.1/dist/micro-bridge.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/micro-message/micro-message/dist/micro-message.min.js"></script>
   <script>
     MicroBridge.Store.set('key', 'value')
   </script>
@@ -31,7 +31,7 @@
 ##### example
 
 ```ts
-import { Store } from 'micro-bridge'
+import { Store } from 'micro-message'
 
 // set
 Store.set('key', 'value')
@@ -69,7 +69,7 @@ Store.getWithScope<Record<string, any>>('key', 'some-scope')
 ##### example
 
 ```ts
-import { StoreChange } from 'micro-bridge'
+import { StoreChange } from 'micro-message'
 
 StoreChange.$on((newStore) => {
   // ...
@@ -94,7 +94,7 @@ StoreChange.$on('path.key', (newValue, oldValue) => {
 ##### example
 
 ```ts
-import { StoreBus } from 'micro-bridge'
+import { StoreBus } from 'micro-message'
 
 StoreBus.$emit('some-event', 'value')
 StoreBus.$on('some-event', (value) => {
