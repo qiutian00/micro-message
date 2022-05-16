@@ -1,14 +1,14 @@
 # micro-message
 
-一个微前端多应用间通信的全局状态管理，支持值分类管理、动态监听、事件总线
+A global state management for communication between micro-frontends and multiple applications, supporting value classification management, dynamic monitoring, and event bus
 
 ### Install
 
-在所有需要通信的应用内将其加入依赖：
+Add it as a dependency in all applications that need to communicate:
 
 ```bash
   yarn add micro-message or pnpm add micro-message
-```
+````
 
 ##### CDN
 
@@ -20,13 +20,13 @@
     MicroBridge.Store.set('key', 'value')
   </script>
 </body>
-```
+````
 
 ### Usage
 
 #### Store
 
-`Store` 是一个含有操作全局数据方法的对象。
+`Store` is an object that contains methods for manipulating global data.
 
 ##### example
 
@@ -48,23 +48,23 @@ Store.getStore()
 // scope data
 Store.setWithScope('key', {}, 'some-scope')
 Store.getWithScope<Record<string, any>>('key', 'some-scope')
-```
+````
 
 ##### methods
 
-|        method        | description                |
-| :------------------: | :------------------------- |
-|     `Store.set`      | 设定值                     |
-|     `Store.get`      | 获取值                     |
-| `Store.setWithScope` | 带标识符设定值（方便管理） |
-| `Store.getWithScope` | 带标识符获取值             |
-|   `Store.getScope`   | 获取标识符下所有数据对象   |
-|   `Store.setScope`   | 设定标识符下整个数据对象   |
-|   `Store.getStore`   | 获取全部数据               |
+| method | description |
+| :-------------------: | :------------------------- |
+| `Store.set` | set value |
+| `Store.get` | get value |
+| `Store.setWithScope` | Set value with identifier (easy to manage) |
+| `Store.getWithScope` | get value with identifier |
+| `Store.getScope` | Get all data objects under the identifier |
+| `Store.setScope` | set the entire data object under the identifier |
+| `Store.getStore` | Get all data |
 
 #### StoreChange
 
-`StoreChange` 被用于监听 `Store` 内数据的变化。
+`StoreChange` is used to listen for changes in the data in the `Store`.
 
 ##### example
 
@@ -77,19 +77,19 @@ StoreChange.$on((newStore) => {
 StoreChange.$on('path.key', (newValue, oldValue) => {
   // ...
 })
-```
+````
 
 ##### methods
 
-|         method         | description                          |
-| :--------------------: | :----------------------------------- |
-|   `StoreChange.$on`    | 监听某个属性上的值变化，支持监听路径 |
-| `StoreChange.$delete`  | 删除某个监听函数                     |
-| `StoreChange.$destory` | 销毁该属性的所有监听                 |
+| method | description |
+| :--------------------------------: | :----------------------------------- ---------- |
+| `StoreChange.$on` | Listen for value changes on a property, support path monitoring |
+| `StoreChange.$delete` | delete a listener function |
+| `StoreChange.$destory` | Destroy all listeners for this property |
 
 #### StoreBus
 
-`StoreBus` 是一个事件总线。
+`StoreBus` is an event bus.
 
 ##### example
 
@@ -100,17 +100,17 @@ StoreBus.$emit('some-event', 'value')
 StoreBus.$on('some-event', (value) => {
   // ...
 })
-```
+````
 
 ##### methods
 
-|       method       | description                |
+| method | description |
 | :----------------: | :------------------------- |
-|   `StoreBus.$on`   | 根据事件名监听某个事件     |
-|  `StoreBus.$emit`  | 事件广播                   |
-| `StoreBus.$delete` | 移除某个正在监听的函数     |
-|  `StoreBus.$off`   | 清空某个事件的所有监听函数 |
+| `StoreBus.$on` | Listen to an event by event name |
+| `StoreBus.$emit` | event broadcast |
+| `StoreBus.$delete` | removes a listening function |
+| `StoreBus.$off` | Clear all listeners for an event |
 
 ### Other
 
-注：无论在使用变化监听还是事件总线时，请留意在组件 `unmount` 时销毁或删除你的监听函数。
+Note: Whether using change listeners or event buses, be careful to destroy or delete your listener functions when the component is `unmount`.
