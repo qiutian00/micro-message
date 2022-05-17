@@ -17,7 +17,7 @@ Add it as a dependency in all applications that need to communicate:
   <!-- ... -->
   <script src="https://cdn.jsdelivr.net/npm/micro-message/dist/micro-message.min.js"></script>
   <script>
-    MicroBridge.Store.set('key', 'value')
+    MicroMessage.Store.set('key', 'value')
   </script>
 </body>
 ````
@@ -82,7 +82,7 @@ StoreChange.$on('path.key', (newValue, oldValue) => {
 ##### methods
 
 | method | description |
-| :--------------------------------: | :----------------------------------- ---------- |
+| :--------------------------------: | :--------------------------------------------- |
 | `StoreChange.$on` | Listen for value changes on a property, support path monitoring |
 | `StoreChange.$delete` | delete a listener function |
 | `StoreChange.$destory` | Destroy all listeners for this property |

@@ -17,7 +17,7 @@
   <!-- ... -->
   <script src="https://cdn.jsdelivr.net/npm/micro-message/micro-message/dist/micro-message.min.js"></script>
   <script>
-    MicroBridge.Store.set('key', 'value')
+    MicroMessage.Store.set('key', 'value')
   </script>
 </body>
 ```
