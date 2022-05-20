@@ -49,7 +49,7 @@ export const deleteSubscribe = <T extends CommonFunc = CommonFunc>(
   return true
 }
 
-export const dispacthSubscribes = (
+export const dispatchSubscribes = (
   key: string,
   scope: string,
   ...args: any[]
@@ -62,7 +62,7 @@ export const dispacthSubscribes = (
   })
 }
 
-export const dispacthAllSubscribes = (scope: string, ...args: any[]) => {
+export const dispatchAllSubscribes = (scope: string, ...args: any[]) => {
   const allSubs = getSubscribes(__ALL_SUBSCRIBE_KEY__, scope)
   allSubs.forEach((func) => {
     try {
@@ -81,8 +81,8 @@ export const getSubscribeBase = <T extends CommonFunc = CommonFunc>(
     destory: (key: string) => destorySubscribes(key, scope),
     delete: (key: string, callback: T) =>
       deleteSubscribe<T>(key, callback, scope),
-    dispacth: (key: string, ...args: any[]) =>
-      dispacthSubscribes(key, scope, ...args),
-    dispatchAll: (...args: any[]) => dispacthAllSubscribes(scope, ...args),
+    dispatch: (key: string, ...args: any[]) =>
+      dispatchSubscribes(key, scope, ...args),
+    dispatchAll: (...args: any[]) => dispatchAllSubscribes(scope, ...args),
   }
 }
