@@ -32,7 +32,7 @@ export const dispatchValueSubscribes = ({
     // dispatch all
     SubBaseForValueChange.dispatchAll(newStoreValue)
     // dispatch current key
-    SubBaseForValueChange.dispacth(key, newValue, oldValue)
+    SubBaseForValueChange.dispatch(key, newValue, oldValue)
   }
 }
 
