@@ -1,4 +1,4 @@
-# micro-message
+# micro-message  [![npm](https://img.shields.io/npm/v/micro-message.svg)](https://npmjs.com/package/micro-message)
 
 一个微前端多应用间通信的全局状态管理，支持值分类管理、动态监听、事件总线
 
