@@ -1,4 +1,4 @@
-# micro-message
+# micro-message  [![npm](https://img.shields.io/npm/v/micro-message.svg)](https://npmjs.com/package/micro-message)
 
 A global state management for communication between micro-frontends and multiple applications, supporting value classification management, dynamic monitoring, and event bus
 
