@@ -28,4 +28,4 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: curl -f https://get.pnpm.io/v6.16.js | node - add --global pnpm
-    - run: pnpm install && pnpm test && pnpm build --if-present
+    - run: pnpm install && pnpm build --if-present && pnpm test
