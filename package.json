@@ -1,6 +1,6 @@
 {
   "name": "micro-message",
-  "version": "1.2.14",
+  "version": "1.2.15",
   "author": "fz6m && qiutian00",
   "description": "global data store of micro front-end / multi app",
   "main": "dist/micro-message.cjs.js",
