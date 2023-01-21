@@ -44,7 +44,7 @@
     "@rollup/plugin-replace": "^3.1.0",
     "@types/jest": "^27.5.2",
     "@types/lodash": "^4.14.191",
-    "@types/node": "^16.18.11",
+    "@types/node": "^18.0.0",
     "@typescript-eslint/parser": "^4.33.0",
     "babel-plugin-lodash": "^3.3.4",
     "cross-env": "^7.0.3",
