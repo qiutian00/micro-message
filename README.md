@@ -114,3 +114,13 @@ StoreBus.$on('some-event', (value) => {
 ### Other
 
 Note: Whether using change listeners or event buses, be careful to destroy or delete your listener functions when the component is `unmount`.
+
+
+### About me
+
+<p align="center">
+  <a href="https://github.com/qiutian00">
+    <img src="https://fastly.jsdelivr.net/npm/qiutian00@0.0.1/screenshot.png"  />
+  </a>
+</p>
+
